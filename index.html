@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat datang di Pusat Akun Quotes yang Berfaedah</h1>
+    <p>Kirimkan kata-kata bijakmu di kolom komentar di bawah:</p>
+
+    <div class="comment-container">
+      <input type="text" id="comment-name" placeholder="Nama">
+      <textarea id="comment-input" placeholder="Tulis komentar di sini..."></textarea>
+      <button id="comment-button">Kirim Komentar</button>
+    </div>
+
+    <div id="comment-section"></div> <!-- Penambahan div untuk menampilkan komentar -->
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js"></script>
+
+  <script>
+    // Inisialisasi Firebase dengan konfigurasi yang Anda dapatkan dari Firebase Console
+    var firebaseConfig = {
+      apiKey: "AIzaSyBnUAYkmuoSeqqsj2P6niKeFoorrtcr0rw",
+      authDomain: "quoetesberfaedahh.firebaseapp.com",
+      databaseURL: "https://quoetesberfaedahh-default-rtdb.firebaseio.com",
+      projectId: "quoetesberfaedahh",
+      storageBucket: "quoetesberfaedahh.appspot.com",
+      messagingSenderId: "465166163372",
+      appId: "1:465166163372:web:8a3eea0db2b9fb4d486e09"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    var database = firebase.database();
+  </script>
+</body>
+</html>
